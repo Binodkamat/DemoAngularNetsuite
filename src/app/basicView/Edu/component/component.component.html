@@ -1,0 +1,19 @@
+<div class="conatiner">
+    <div class="row">
+        <div class="col-md-4">
+            <label for="mi" class="form-label">TYPE YOUR FIRST NUMBER :</label>
+            <input type="number" #p class="form-control" id="mi">
+            <label for="i" class="form-label">TYPE YOUR SECOND NUMBER :</label>
+            <input type="number" #q class="form-control" id="i">
+            <label for="c" class="mt-2 ">CLICK ON  TO CHOOSE YOUR COLOR : </label>
+            &nbsp;<input type="color" id="c" #c class="m-2">
+            <hr>
+        </div>
+    </div>
+</div>
+
+<button type="button" class="btn btn-primary m-1" (click)="fun1(p.value,q.value,c.value)"> Additon</button>
+<button type="button" class="btn btn-primary m-1" (click)="fun2(p.value,q.value,c.value)"> Subtract</button>
+<button type="button" class="btn btn-primary m-1" (click)="fun3(p.value,q.value,c.value)"> Division</button>
+<button type="button" class="btn btn-primary m-1" (click)="fun4(p.value,q.value,c.value)"> Multiply</button>
+<h4 *ngIf="cli" [style.color]="color" class="form-control ">Bhupesh has {{operation}} of the number is {{r}}</h4>
